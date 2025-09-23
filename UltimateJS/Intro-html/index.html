@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Primera Web</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table style="width: 500px;">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+       <tbody>
+        <tr>
+            <td>Bmw M320</td>
+            <td>Gratis</td>
+        </tr>
+        <tr>
+            <td>Perrito Pro</td>
+            <td>19,90$</td>
+        </tr>
+        <tr>
+            <td>Perrito Pro muy Pro</td>
+            <td>30,75$</td>
+        </tr>
+       </tbody>
+       <tfoot>
+        <td></td>
+        <td>Total: 50,65$</td>
+       </tfoot>
+    </table>
+    <!-- ul es lista no ordenada -->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+
+    <!-- ol es una lista ordenada -->
+    <ol>
+        <li value="50">Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>
+            <ol>
+                <li style="list-style-type: lower-roman;">sub Elemento 1</li>
+                <li style="list-style-type: lower-roman;">sub Elemento 2</li>
+                <li style="list-style-type: lower-roman;">sub Elemento 3</li>
+                <li style="list-style-type: lower-roman;">sub Elemento 4</li>
+            </ol>
+        </li>
+    </ol>
+
+
+
+
+    <form action="/Formulario" method="post">
+        <label for="Nombre">Nombre</label>
+        <input vuale="Cerdo" type="text" id="Nombre" name="Nombre" placeholder="Perro Feliz..." />
+        <br>
+        <label for="Apellido">Apellido</label>
+        <input value="feliz" type="text" id="Apellido" name="Apellido" placeholder="Perro triste..." />
+        <br>
+        <label for="comentario">Comentario</label>
+        <textarea rows="10" cols="50" id="comentario" placeholder="comentario" name="comentario">Este es un valor por defecto</textarea>
+        <br>
+        <button type="button">Tipo boton</button>
+        <button type="reset">Tipo reset</button>
+        <button type="submit">Tipo Submit</button>
+     </form>
+    <h1>Mi Primer Heading</h1>
+    <h2>Mi Segundo Heading</h2>
+    <h3>Mi Tercero Heading</h3>
+    <h4>Mi Cuarto Heading</h4>
+    <h5>Mi Quinto Heading</h5>
+    <h6>Perro Loco</h6>
+    <p>Perro loco esta muy loco.</p>
+    <p>El perro se volvio feliz.</p>
+    <hr>
+    <h2>Perro javier</h2>
+    <p>Texto un poco mas <span style="color:aqua">largo para mostrar</span> la etiqueta de span!<br><br> ya que es muy buena y divertida</p>
+    <!-- Hola mundo -->
+     <a target="_blank" href="https://www.google.com">Ir a google</a>
+     <img src="img/coffee.png" height="400"/>
+</body>
+</html>

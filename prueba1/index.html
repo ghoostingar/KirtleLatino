@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web profesional moderna y responsive para tiendas online, freelancers y empresas. Incluye catálogo de productos, blog y más. Optimizada para SEO y carga rápida.">
+    <title>Mi Sitio Web Profesional - Moderno y Responsive</title>
+    <!-- Google Fonts para tipografía clara y moderna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset y estilos base para código limpio y rápido */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header simple */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        nav h1 {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 2rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #007bff;
+        }
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: #fff;
+            text-align: center;
+            padding: 150px 0 100px;
+            margin-top: 70px; /* Ajuste por header fijo */
+        }
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: #007bff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .btn:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+        }
+        /* Sección Servicios/Productos - Tarjetas */
+        #servicios {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        #servicios h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        /* Sección Ideal Para */
+        #ideal {
+            padding: 80px 0;
+            text-align: center;
+        }
+        #ideal h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        #ideal ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        #ideal li {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+        /* Testimonios */
+        #testimonios {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        #testimonios h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        .testimonio {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .testimonio p {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        .testimonio cite {
+            font-weight: 700;
+            color: #007bff;
+        }
+        /* Blog Preview */
+        #blog {
+            padding: 80px 0;
+        }
+        #blog h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        .post {
+            display: flex;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 2rem;
+        }
+        .post img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 2rem;
+        }
+        .post-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .post-content p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .post-content a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        /* Carrito Placeholder */
+        #carrito {
+            padding: 80px 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        #carrito h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        #carrito-btn {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        #carrito-btn:hover {
+            background: #0056b3;
+        }
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .social {
+            margin: 1rem 0;
+        }
+        .social a {
+            margin: 0 1rem;
+            font-size: 1.5rem;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; /* Menú hamburguesa simple, pero para simplicidad, ocultar */
+            }
+            #hero h1 {
+                font-size: 2rem;
+            }
+            #hero p {
+                font-size: 1rem;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            #ideal ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .post {
+                flex-direction: column;
+                text-align: center;
+            }
+            .post img {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+            #hero {
+                padding: 120px 0 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header>
+        <nav class="container">
+            <h1>MiSitio</h1>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1>Bienvenido a Mi Sitio Web Profesional</h1>
+            <p>Descubre soluciones modernas y responsive para tu negocio. Optimizado para SEO y carga ultrarrápida.</p>
+            <a href="#servicios" class="btn">Explorar Servicios</a>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios/Productos -->
+    <section id="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios y Productos</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200?text=Servicio+1" alt="Servicio de diseño web profesional y responsive">
+                    <h3>Diseño Web</h3>
+                    <p>Crea sitios web modernos y adaptables a todos los dispositivos.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200?text=Producto+2" alt="Producto digital para marketing online">
+                    <h3>Marketing Digital</h3>
+                    <p>Estrategias para impulsar tu presencia en línea.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200?text=Servicio+3" alt="Consultoría para empresas y freelancers">
+                    <h3>Consultoría</h3>
+                    <p>Asesoría personalizada para tu negocio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Ideal Para -->
+    <section id="ideal">
+        <div class="container">
+            <h2>Ideal Para</h2>
+            <ul>
+                <li>Tiendas online</li>
+                <li>Freelancers</li>
+                <li>Empresas de servicios</li>
+                <li>Blogs personales</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios">
+        <div class="container">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <div class="testimonio">
+                <p>"Excelente servicio, mi sitio web carga en segundos y es perfecto para móvil."</p>
+                <cite>- Cliente Satisfecho</cite>
+            </div>
+            <div class="testimonio">
+                <p>"Fácil de usar y muy profesional. Recomendado para freelancers."</p>
+                <cite>- Otro Cliente</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section id="blog">
+        <div class="container">
+            <h2>Últimas Publicaciones del Blog</h2>
+            <article class="post">
+                <img src="https://via.placeholder.com/200x150?text=Post+1" alt="Vista previa del post sobre SEO en 2023">
+                <div class="post-content">
+                    <h3>Cómo Optimizar tu Sitio para SEO en 2023</h3>
+                    <p>Descubre las mejores prácticas para mejorar tu posicionamiento en Google.</p>
+                    <a href="#">Leer más</a>
+                </div>
+            </article>
+            <article class="post">
+                <img src="https://via.placeholder.com/200x150?text=Post+2" alt="Vista previa del post sobre diseño responsive">
+                <div class="post-content">
+                    <h3>Diseño Responsive: Claves para el Éxito</h3>
+                    <p>Aprende a crear sitios que se adapten a cualquier dispositivo.</p>
+                    <a href="#">Leer más</a>
+                </div>
+            </article>
+            <article class="post">
+                <img src="https://via.placeholder.com/200x150?text=Post+3" alt="Vista previa del post sobre e-commerce">
+                <div class="post-content">
+                    <h3>Guía para Lanzar tu Tienda Online</h3>
+                    <p>Pasos simples para empezar a vender en línea hoy mismo.</p>
+                    <a href="#">Leer más</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Carrito de Compras Placeholder -->
+    <section id="carrito">
+        <div class="container">
+            <h2>Carrito de Compras</h2>
+            <p>Aquí puedes agregar productos de nuestro catálogo. (Placeholder para funcionalidad completa)</p>
+            <button id="carrito-btn" onclick="alert('Carrito vacío. ¡Agrega productos desde el catálogo!')">Ver Carrito</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Email: info@misitio.com | Tel: +1 234 567 890</p>
+            <div class="social">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <p>&copy; 2023 Mi Sitio Web. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Puro para interacciones simples (opcional, mínimo para velocidad) -->
+    <script>
+        // Smooth scroll para enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Gabriel Lescano - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+
+    <!-- Encabezado principal -->
+    <header class="animate__animated animate__fadeInDown">
+        <h1>¡Hola! Soy Alan Gabriel Lescano</h1>
+        <p>Programador Junior Backend apasionado por la tecnología y los autos. Bienvenido a mi portfolio.</p>
+    </header>
+
+    <!-- Sección de iconos sociales -->
+    <section class="social-icons animate__animated animate__fadeIn">
+        <a href="https://mygoogleprofile.com" target="_blank" title="Google"><i class="fab fa-google"></i></a>
+        <a href="https://www.instagram.com/alanlw_" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/alan-lescano-952b77335" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Ghosteado2" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://discord.com/users/ghoosteado" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+    </section>
+
+    <!-- Sobre mí -->
+    <section class="about animate__animated animate__fadeIn">
+        <h2>Sobre mí</h2>
+        <p>Soy un programador de 19 años de Argentina. Me especializo en desarrollo backend y disfruto aprender nuevas tecnologías. Fuera de la programación, me apasionan los autos y la creatividad tecnológica.</p>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="skills animate__animated animate__fadeIn">
+        <h2>Habilidades Técnicas</h2>
+        <div class="skills-list">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+            <div>React Native</div>
+        </div>
+        <!-- Contenedor para el modelo 3D -->
+        <div id="car-container"></div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="projects animate__animated animate__fadeIn">
+        <h2>Proyectos Destacados</h2>
+        <div class="project-list">
+            <div class="project">
+                <h3>Mi Proyecto 1</h3>
+                <p>Descripción breve del proyecto 1.</p>
+                <a href="#">Ver más</a>
+            </div>
+            <div class="project">
+                <h3>Mi Proyecto 2</h3>
+                <p>Descripción breve del proyecto 2.</p>
+                <a href="#">Ver más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Laboral -->
+    <section class="experience animate__animated animate__fadeIn">
+        <h2>Experiencia Laboral</h2>
+        <div class="experience-list">
+            <div class="experience-item">
+                <h3>Desarrollador Backend</h3>
+                <p>Empresa XYZ - 2022 a 2023</p>
+                <p>Descripción de las responsabilidades y logros.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact animate__animated animate__fadeIn">
+        <h2>Contáctame</h2>
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Tu nombre" required>
+                <span id="nameError" class="error-text"></span>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                <span id="emailError" class="error-text"></span>
+            </div>
+            <div class="form-group">
+                <textarea id="message" placeholder="Tu mensaje" rows="5" required></textarea>
+                <span id="messageError" class="error-text"></span>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="successMessage" class="success-message" style="display: none;">
+            ¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <!-- Three.js y GLTFLoader -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="car.js"></script> <!-- Script para el modelo 3D -->
+</body>
+</html>
